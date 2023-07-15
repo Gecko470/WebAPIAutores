@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YyfEBh6amkoju/gJ0kM2tHShJFPDmTczqoz23Z6KgtfO8KQJZab+jnGXDGQiL+3BZNvEi34mp/OaxfTmQGGk9A==",
+  "dgSpecHash": "xQ/CgZd3EZYIsU+5Jn3/0Lkff1WpBWZr8mfLNLrvhXELA9k7Fv1P8jC0HwFSB0+AlCj64eVNuE5oRAf52rlNfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\juang\\Documents\\Mis Documentos\\Desarrollo\\.NET\\repos\\UDEMY\\Gavilan\\API\\Proyectos\\WebAPIAutores\\WebAPIAutores\\WebAPIAutores.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,10 @@
     "C:\\Users\\juang\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\juang\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.19\\microsoft.aspnetcore.authentication.jwtbearer.6.0.19.nupkg.sha512",
+    "C:\\Users\\juang\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.19\\microsoft.aspnetcore.cryptography.internal.6.0.19.nupkg.sha512",
+    "C:\\Users\\juang\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.19\\microsoft.aspnetcore.cryptography.keyderivation.6.0.19.nupkg.sha512",
+    "C:\\Users\\juang\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.19\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.19.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.19\\microsoft.aspnetcore.jsonpatch.6.0.19.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.19\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.19.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
@@ -29,6 +33,8 @@
     "C:\\Users\\juang\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "C:\\Users\\juang\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.19\\microsoft.extensions.identity.core.6.0.19.nupkg.sha512",
+    "C:\\Users\\juang\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.19\\microsoft.extensions.identity.stores.6.0.19.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\juang\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",

@@ -2,10 +2,11 @@
 using Microsoft.Extensions.Configuration;
 using WebAPIAutores.Models;
 using System.Configuration;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace WebAPIAutores
 {
-    public class AppDBContext : DbContext
+    public class AppDBContext : IdentityDbContext /*DbContext*/ 
     {
         private readonly IConfiguration configuration;
         public AppDBContext(DbContextOptions options) : base(options)

@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 using WebAPIAutores.DTOs;
 using WebAPIAutores.Models;
 
-namespace WebAPIAutores.Controllers
+namespace WebAPIAutores.Controllers.v1
 {
     [ApiController]
-    [Route("api/Libros")]
+    [Route("api/v1/Libros")]
     public class LibrosController : ControllerBase
     {
         private readonly AppDBContext context;
@@ -26,12 +26,17 @@ namespace WebAPIAutores.Controllers
         {
             Libro libroBd = await context.Libros.Include(x => x.Comentarios).Include(x => x.AutoresLibros).ThenInclude(x => x.Autor).FirstOrDefaultAsync(x => x.Id == id);
 
+            if (libroBd == null)
+            {
+                return NotFound($"El libro con el Id: {id} no existe en la BD..");
+            }
+
             libroBd.AutoresLibros = libroBd.AutoresLibros.OrderBy(x => x.Orden).ToList();
 
             return mapper.Map<LibroDTOconAutores>(libroBd);
         }
 
-        [HttpPost]
+        [HttpPost(Name = "postLibro")]
         public async Task<ActionResult> Post(LibroCreacionDTO libroCreacionDTO)
         {
             if (libroCreacionDTO.AutoresIds == null)
@@ -58,7 +63,7 @@ namespace WebAPIAutores.Controllers
             return CreatedAtRoute("LibroById", new { id = libro.Id }, libroDTO);
         }
 
-        [HttpPut("{id:int}")]
+        [HttpPut("{id:int}", Name = "putLibro")]
         public async Task<ActionResult> Put(int id, LibroCreacionDTO libroCreacionDTO)
         {
             var libroBD = await context.Libros.Include(x => x.AutoresLibros).FirstOrDefaultAsync(x => x.Id == id);
@@ -77,7 +82,7 @@ namespace WebAPIAutores.Controllers
             return NoContent();
         }
 
-        [HttpPatch]
+        [HttpPatch(Name = "patchLibro")]
         public async Task<ActionResult> Patch(int libroId, JsonPatchDocument<LibroPatchDTO> patchDocument)
         {
             if (patchDocument == null)
@@ -104,6 +109,22 @@ namespace WebAPIAutores.Controllers
             }
 
             mapper.Map(libroPatchDTO, libroBD);
+            await context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete(Name = "deleteLibro")]
+        public async Task<ActionResult> Delete(int libroId)
+        {
+            var libroBd = await context.Libros.FirstOrDefaultAsync(x => x.Id == libroId);
+
+            if (libroBd == null)
+            {
+                return NotFound();
+            }
+
+            context.Remove(new Libro() { Id = libroId });
             await context.SaveChangesAsync();
 
             return NoContent();
